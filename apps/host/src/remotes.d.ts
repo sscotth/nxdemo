@@ -4,3 +4,5 @@
 declare module 'shop/Module';
 declare module 'cart/Module';
 declare module 'about/Module';
+declare module 'app_exposes/App';
+declare module 'cramfedemo/App';

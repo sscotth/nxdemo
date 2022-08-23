@@ -8,6 +8,10 @@ const Cart = React.lazy(() => import('cart/Module'));
 
 const About = React.lazy(() => import('about/Module'));
 
+const CRA = React.lazy(() => import('cramfedemo/App'));
+
+const Vue = React.lazy(() => import('app_exposes/App'));
+
 export function App() {
   return (
     <React.Suspense fallback={null}>
@@ -27,6 +31,14 @@ export function App() {
         <li>
           <Link to="/about">About</Link>
         </li>
+
+        <li>
+          <Link to="/cra">CRA</Link>
+        </li>
+
+        <li>
+          <Link to="/vue">Vue</Link>
+        </li>
       </ul>
       <Routes>
         <Route path="/" element={<NxWelcome title="host" />} />
@@ -36,6 +48,9 @@ export function App() {
         <Route path="/cart" element={<Cart />} />
 
         <Route path="/about" element={<About />} />
+
+        <Route path="/cra" element={<CRA />} />
+        <Route path="/vue" element={<Vue />} />
       </Routes>
     </React.Suspense>
   );
